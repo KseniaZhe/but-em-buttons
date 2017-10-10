@@ -36,6 +36,7 @@ html {
   background-color: rgba(180, 255, 244, .2);
   border: 3px solid #b4fff4;
   padding-bottom: 0;
+  top: calc(50% + 4.7em);
 }
 
 .content {
