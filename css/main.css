@@ -15,27 +15,27 @@ html {
   border: 3px solid #90ccc3;
   border-radius: 7px;
   vertical-align: middle;
-  position: relative;
+  transition: all .4s linear;
+  position: absolute;
+  width: 10em;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: left;
+  top: calc(50% + 4em);
 }
 
 .btn-ghost:hover {
   color: #b4fff4;
   background-color: rgba(180, 255, 244, .2);
   border: 3px solid #b4fff4;
-  padding: .5em;
 }
 
-.border-bottom {
-  display: block;
-  border-bottom: 3px solid #90ccc3;
-  position: absolute;
-  width: 100%;
-  bottom: .5em;
-  left: 0;
-}
-
-.btn-ghost:hover .border-bottom {
-  border-bottom: 3px solid #b4fff4;
+.btn-ghost:focus,
+.btn-ghost:active {
+  color: #b4fff4;
+  background-color: rgba(180, 255, 244, .2);
+  border: 3px solid #b4fff4;
+  padding-bottom: 0;
 }
 
 .content {
@@ -51,13 +51,38 @@ html {
   text-shadow: 0 0 10px rgba(255, 255, 255, .7);
 }
 
-.call-to-action {
-  padding: .25em 1.5em .65em .15em;
-}
-
 .rocket {
   position: absolute;
-  top: calc(50% - .25em) ;
-  left: 85%;
-  transform: translate(-50%, -50%);
+  top: calc(50% - .25em);
+  right: .25em;
+  transform: translateY(-50%);
+  transition: all .4s linear;
+}
+
+.btn-ghost:hover .rocket {
+  top: calc(50% - .5em);
+}
+
+.btn-ghost:focus .rocket {
+  top: calc(50% - .2em);
+}
+
+.border-bottom {
+  display: block;
+  border-bottom: 3px solid #90ccc3;
+  position: absolute;
+  width: 100%;
+  bottom: .6em;
+  left: 0;
+  transition: all .4s linear;
+}
+
+.btn-ghost:hover .border-bottom {
+  border-color: #b4fff4;
+}
+
+.btn-ghost:focus .border-bottom,
+.btn-ghost:active .border-bottom {
+  bottom: calc(.5em - .42em);
+  border-color: #b4fff4;
 }
